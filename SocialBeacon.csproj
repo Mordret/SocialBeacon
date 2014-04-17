@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B984239-E8CB-4E90-BA5B-3500C2994491}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{F278D4AB-4730-4720-B08E-FE5E31564D9E};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SocialBeacon</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>SocialBeacon</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Support.v4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Activities\InfoEditForm.cs" />
+    <Compile Include="Activities\InfoViewForm.cs" />
+    <Compile Include="Helpers\HelperFunctions.cs" />
+    <Compile Include="Helpers\SBConst.cs" />
+    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\ClientBeacon.cs">
+      <Link>Dash\ClientBeacon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\ClientQuery.cs">
+      <Link>Dash\ClientQuery.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\DashConst.cs">
+      <Link>Dash\DashConst.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\DashMethods.cs">
+      <Link>Dash\DashMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\DashNode.cs">
+      <Link>Dash\DashNode.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\DashReceiver.cs">
+      <Link>Dash\DashReceiver.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\DashSender.cs">
+      <Link>Dash\DashSender.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\DashSerializer.cs">
+      <Link>Dash\DashSerializer.cs</Link>
+    </Compile>
+    <Compile Include="Activities\ChatView.cs" />
+    <Compile Include="Services\ServerQuery.cs" />
+    <Compile Include="Helpers\Person.cs" />
+    <Compile Include="..\..\..\Dropbox\Visual Studio 2010\Projects\Dash\Dash\Dash.cs">
+      <Link>Dash\Dash.cs</Link>
+    </Compile>
+    <Compile Include="List Adapter\ChatMessagesAdapter.cs" />
+    <Compile Include="Helpers\ChatMessage.cs" />
+    <Compile Include="Services\ChatMessagesReceiver.cs" />
+    <Compile Include="List Adapter\OnlineUsersListAdapter.cs" />
+    <Compile Include="Helpers\Server.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\layout\ChatListItem.axml" />
+    <AndroidResource Include="Resources\layout\ChatView.axml" />
+    <AndroidResource Include="Resources\layout\FriendChatBubble.axml" />
+    <AndroidResource Include="Resources\layout\InfoEditForm.axml" />
+    <AndroidResource Include="Resources\layout\MyChatBubble.axml" />
+    <AndroidResource Include="Resources\drawable\default_profile_pic.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Afghanistan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Albania.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Algeria.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Andorra.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Angola.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Anguilla.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Antigua_and_Barbuda.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Argentina.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Armenia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Aruba.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Australia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Austria.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Azerbaijan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bahamas.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bahrain.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bangladesh.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Barbados.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Belarus.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Belgium.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Belize.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Benin.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bermuda.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bhutan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bolivia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bosnia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Botswana.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Brazil.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_British_Virgin_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Brunei.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Bulgaria.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Burkina_Faso.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Burundi.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Cambodia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Cameroon.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Canada.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Cape_Verde.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Cayman_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Central_African_Republic.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Chad.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Chile.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_China.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Christmas_Island.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Colombia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Comoros.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Cook_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Costa_Rica.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Croatia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Cuba.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Cyprus.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Czech_Republic.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Denmark.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Djibouti.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Dominica.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Dominican_Republic.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Ecuador.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Egypt.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_El_Salvador.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Equatorial_Guinea.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Eritrea.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Estonia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Ethiopia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Falkland_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Faroe_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Fiji.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Finland.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_France.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_French_Polynesia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Gabon.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Gambia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Georgia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Germany.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Ghana.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Gibraltar.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Greece.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Greenland.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Grenada.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Guam.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Guatemala.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Guinea.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Guinea_Bissau.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Guyana.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Haiti.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Honduras.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Hong_Kong.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Hungary.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Iceland.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_India.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Indonesia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Iran.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Iraq.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Ireland.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Israel.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Italy.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Jamaica.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Japan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Jordan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Kazakhstan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Kenya.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Kiribati.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Kuwait.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Kyrgyzstan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Laos.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Latvia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Lebanon.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Lesotho.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Liberia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Libya.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Liechtenstein.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Lithuania.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Luxembourg.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Macao.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Macedonia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Madagascar.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Malawi.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Malaysia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Maldives.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Mali.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Malta.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Marshall_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Martinique.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Mauritania.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Mauritius.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Mexico.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Micronesia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Moldova.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Monaco.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Mongolia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Montserrat.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Morocco.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Mozambique.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Myanmar.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Namibia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Nauru.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Nepal.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Netherlands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Netherlands_Antilles.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_New_Zealand.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Nicaragua.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Niger.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Nigeria.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Niue.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Norfolk_Island.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_North_Korea.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Norway.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Oman.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Pakistan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Palau.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Panama.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Papua_New_Guinea.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Paraguay.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Peru.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Philippines.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Pitcairn_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Poland.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Portugal.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Puerto_Rico.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Qatar.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Romania.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Russian_Federation.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Rwanda.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Saint_Kitts_and_Nevis.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Saint_Lucia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Saint_Pierre.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Saint_Vicent_and_the_Grenadines.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Samoa.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_San_Marino.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Saudi_Arabia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Senegal.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Serbia_and_Montenegro.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Seychelles.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Sierra_Leone.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Singapore.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Slovakia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Slovenia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Soloman_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Somalia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_South_Africa.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_South_Georgia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_South_Korea.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Spain.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Sri_Lanka.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Sudan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Suriname.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Swaziland.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Sweden.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Switzerland.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Syria.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Taiwan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Tajikistan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Tanzania.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Thailand.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Togo.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Tonga.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Trinidad_and_Tobago.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Tunisia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Turkey.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Turkmenistan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Turks_and_Caicos_Islands.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Tuvalu.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Uganda.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Ukraine.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_United_Kingdom.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_United_States_of_America.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Uruguay.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Uzbekistan.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Vanuatu.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Vatican_City.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Venezuela.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Vietnam.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Wallis_and_Futuna.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Yemen.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Zambia.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Zimbabwe.png" />
+    <AndroidResource Include="Resources\values\country_codes.xml" />
+    <AndroidResource Include="Resources\values\country_names.xml" />
+    <AndroidResource Include="Resources\drawable\CFLAG_American_Samoa.png" />
+    <AndroidResource Include="Resources\drawable\CFLAG_Timor_Leste.png" />
+    <AndroidResource Include="Resources\layout\MainLayout.axml" />
+    <AndroidResource Include="Resources\drawable\CFLAG_AAA.png" />
+    <AndroidResource Include="Resources\layout\InfoViewForm.axml" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\manutza.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Activities\" />
+    <Folder Include="Resources\layout\" />
+    <Folder Include="Resources\drawable\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Dash\" />
+    <Folder Include="List Adapter\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+</Project>

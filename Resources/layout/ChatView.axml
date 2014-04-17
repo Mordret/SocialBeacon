@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/manutza"
+        android:id="@+id/manutzaFL">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/chat">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_weight="1">
+                <ListView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@android:color/transparent"
+                    android:id="@+id/chatMessages" />
+            </LinearLayout>
+            <TableLayout
+                android:id="@+id/sendMsgBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0">
+                <TableRow>
+                    <EditText
+                        android:hint="Type your message ..."
+                        android:layout_weight="1"
+                        android:id="@+id/chatMsg"
+                        android:layout_column="0" />
+                    <Button
+                        android:text="Send"
+                        android:id="@+id/sendBtn" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <ListView
+        android:id="@+id/chatList"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:layout_gravity="start" />
+</android.support.v4.widget.DrawerLayout>

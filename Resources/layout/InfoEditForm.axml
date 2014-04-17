@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Basic info : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:stretchColumns="1">
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+                        <ImageView
+                            android:src="@drawable/default_profile_pic"
+                            android:id="@+id/profilePic"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:adjustViewBounds="false"
+                            android:scaleType="fitXY"
+                            android:layout_marginLeft="10dp" />
+                        <ImageView
+                            android:id="@+id/flag"
+                            android:layout_width="45dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/CFLAG_AAA" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/frame"
+                        android:layout_column="1"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/centerline"
+                            android:layout_centerVertical="true" />
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/firstNameET"
+                            android:layout_above="@id/centerline"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="20sp"
+                            android:textColor="#FFFFFF"
+                            android:windowSoftInputMode="stateHidden"
+                            android:hint="First Name" />
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lastNameET"
+                            android:layout_below="@id/centerline"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:textSize="20sp"
+                            android:textColor="#FFFFFF"
+                            android:hint="Last Name" />
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:text="Age : "
+                        android:layout_gravity="center"
+                        android:textColor="#FFFFFF" />
+                    <EditText
+                        android:numeric="integer"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:id="@+id/ageET" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tableRow1">
+                    <TextView
+                        android:text="Country :"
+                        android:layout_gravity="center"
+                        android:id="@+id/textView1"
+                        android:textColor="#FFFFFF" />
+                    <Spinner
+                        android:layout_column="1"
+                        android:id="@+id/countrySPN"
+                        android:layout_weight="1"
+                        android:entries="@array/country_names" />
+                </TableRow>
+                <TextView
+                    android:text="Optional info : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#ffffffff" />
+                <TableRow
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:text="City : "
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="#FFFFFF" />
+                    <EditText
+                        android:id="@+id/cityET" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow1">
+                    <TextView
+                        android:text="Phone :"
+                        android:layout_gravity="center"
+                        android:id="@+id/textView2"
+                        android:textColor="#FFFFFF" />
+                    <EditText
+                        android:numeric="integer"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:id="@+id/phoneET" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="E-mail :"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="center" />
+                    <EditText
+                        android:id="@+id/emailET"
+                        android:layout_weight="1" />
+                </TableRow>
+                <TextView
+                    android:text="About"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/aboutET" />
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/saveBtn" />
+        <Button
+            android:text="Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/cancelBtn" />
+    </LinearLayout>
+</LinearLayout>
